@@ -13,6 +13,8 @@ set autoindent
 " set is
 " set noswapfile
 set dictionary+=/usr/share/dict/words
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 execute pathogen#infect()
 " set cursorline
 set number
@@ -31,6 +33,9 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 set ruler
 set formatoptions+=r
+if has ("autocmd")
+   filetype plugin indent on
+endif
 " set <F8> to highlight all words matching the string under cursor
 nnoremap <F8> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 " set <F5> to list all open buffers
