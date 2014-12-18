@@ -21,11 +21,12 @@ set number
 set background=dark
 " set background=light
 set t_Co=256
+syntax on
 let g:solarized_termtrans=1
-colorscheme solarized
+" colorscheme solarized
 " colorscheme cleanroom
-setlocal spell spelllang=en_us
-set spell
+" setlocal spell spelllang=en_us
+" set spell
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
@@ -33,9 +34,6 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 set ruler
 set formatoptions+=r
-if has ("autocmd")
-   filetype plugin indent on
-endif
 " set <F8> to highlight all words matching the string under cursor
 nnoremap <F8> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 " set <F5> to list all open buffers
