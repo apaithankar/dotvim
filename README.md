@@ -4,7 +4,7 @@ Installation:
 
 Create symlinks:
 
-    FILES='vimrc git-completion.bash bashrc bash_profile'
+    FILES='vimrc git-completion.bash bashrc bash_profile screenrc'
     for i in $FILES; do ln -s ~/.vim/${i} ~/.${i}; done
 
 Switch to the `~/.vim` directory, and fetch submodules:
