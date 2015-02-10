@@ -5,7 +5,7 @@ Installation:
 Create symlinks:
 
     FILES='vimrc git-completion.bash bashrc bash_profile'
-    for i in $FILES; do ln -s ~/.vim/${i} ~/.${i}
+    for i in $FILES; do ln -s ~/.vim/${i} ~/.${i}; done
 
 Switch to the `~/.vim` directory, and fetch submodules:
 
