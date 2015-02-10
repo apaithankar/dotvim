@@ -6,7 +6,7 @@ set expandtab
 map OH <Home>
 map OF <End>
 set hlsearch
-set cindent
+" set cindent
 set smartindent
 set autoindent
 " Incremental search is irritating sometimes.
@@ -18,13 +18,13 @@ call pathogen#helptags()
 execute pathogen#infect()
 " set cursorline
 set number
-set background=dark
-" set background=light
+" set background=dark
+set background=light
 set t_Co=256
 syntax on
 let g:solarized_termtrans=1
 " colorscheme solarized
-" colorscheme cleanroom
+colorscheme cleanroom
 " setlocal spell spelllang=en_us
 " set spell
 highlight ExtraWhitespace ctermbg=red guibg=red
