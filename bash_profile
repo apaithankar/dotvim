@@ -12,7 +12,7 @@ alias ls='ls -G'
 alias gogor='cd ~/Golang/src/github.com/apaithankar/gorilla'
 
 export PS1='[\D{%F} \t][\u@\h:\w$(__git_ps1 " ${RED}(%s)${NORMAL}")]\n$ '
-export JAVA_HOME=`/usr/libexec/java_home`
+# export JAVA_HOME=`/usr/libexec/java_home`
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/Golang
 export PATH=~/bin:$GOPATH/bin:$PATH
