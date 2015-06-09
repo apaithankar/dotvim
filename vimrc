@@ -1,7 +1,7 @@
 set tags=tags
 set ignorecase
-set tabstop=3
-set shiftwidth=3
+set tabstop=4
+set shiftwidth=4
 set expandtab
 map OH <Home>
 map OF <End>
@@ -16,15 +16,18 @@ set dictionary+=/usr/share/dict/words
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 execute pathogen#infect()
-" set cursorline
+set cursorline
 set number
+let g:solarized_termtrans=1
 " set background=dark
 set background=light
 set t_Co=256
 syntax on
-let g:solarized_termtrans=1
-" colorscheme solarized
-colorscheme cleanroom
+colorscheme solarized
+" colorscheme cleanroom
+" silent! colorscheme inori
+" colorscheme hemisu
+" colorscheme ir_black
 " setlocal spell spelllang=en_us
 " set spell
 highlight ExtraWhitespace ctermbg=red guibg=red
