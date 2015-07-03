@@ -19,8 +19,8 @@ execute pathogen#infect()
 set cursorline
 set number
 let g:solarized_termtrans=1
-" set background=dark
-set background=light
+set background=dark
+" set background=light
 set t_Co=256
 syntax on
 colorscheme solarized
