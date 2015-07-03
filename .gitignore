@@ -1,4 +1,4 @@
 .netrwhist
-vim-go
-inori
-snipmate.vim
+bundle/vim-go
+bundle/inori
+bundle/snipmate.vim
