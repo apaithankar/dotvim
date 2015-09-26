@@ -28,6 +28,8 @@ colorscheme solarized
 " silent! colorscheme inori
 " colorscheme hemisu
 " colorscheme ir_black
+" colorscheme pyte
+" colorscheme molokai
 " setlocal spell spelllang=en_us
 " set spell
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -57,3 +59,7 @@ map! <M-Esc>[64~ <S-MouseDown>
 map <M-Esc>[65~ <S-MouseUp>
 map! <M-Esc>[65~ <S-MouseUp>
 au BufRead traces* setf traces
+filetype plugin on
+let g:go_disable_autoinstall = 0
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE

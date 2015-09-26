@@ -5,7 +5,7 @@
 RED="\E[00;31m"
 NORMAL="\E[0;00m"
 
-OS=`uname -a | awk '{print $1}'`
+OS=`uname -s`
 source ~/.git-completion.bash
 
 alias mvnci='mvn clean install -DskipTests'
@@ -17,7 +17,10 @@ export PS1='[\D{%F} \t][\u@\h:\w$(__git_ps1 " ${RED}(%s)${NORMAL}")]\n$ '
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/Golang
 export SCALA_HOME=/opt/scala-2.11.5
-export PATH=~/bin:$SCALA_HOME/bin:$GOPATH/bin:$PATH
+export DEPOT_TOOLS_PATH=/home/abhijit/Projects/ChromeOS/depot_tools
+export IDEA_HOME=/home/abhijit/local/idea-IC-141.178.9
+export JAVA_HOME=/opt/java/64/jdk1.7.0_79/
+export PATH=~/bin:$GOROOT/bin:$GOPATH/bin:$SCALA_HOME/bin:$DEPOT_TOOLS_PATH:$IDEA_HOME/bin:$PATH
 
 if [ "$OS" == "Darwin" ]; then
    alias ls='ls -G'

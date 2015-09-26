@@ -1,3 +1,6 @@
 [submodule "bundle/dracula-theme"]
 	path = bundle/dracula-theme
 	url = git@github.com:zenorocha/dracula-theme.git
+[submodule "bundle/dracula/repo"]
+	path = bundle/dracula/repo
+	url = git@github.com:zenorocha/dracula-theme.git
