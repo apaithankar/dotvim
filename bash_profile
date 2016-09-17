@@ -8,27 +8,26 @@ NORMAL="\E[0;00m"
 OS=`uname -s`
 source ~/.git-completion.bash
 
-alias mvnci='mvn clean install -DskipTests'
 alias gogor='cd ~/Golang/src/github.com/apaithankar/gorilla'
 alias vi='vim'
-alias gpom='git pull origin master'
+alias xterm_white='xterm -fa 'Monaco' -fs 11 -fg black -bg white +sb'
+alias xterm_black='xterm -fa 'Monaco' -fs 11 -fg white -bg black +sb'
 
 export PS1='[\D{%F} \t][\u@\h:\w$(__git_ps1 " ${RED}(%s)${NORMAL}")]\n$ '
 export GOROOT=/usr/local/go
-export GOPATH=$HOME/Golang
-export SCALA_HOME=/opt/scala-2.11.5
-export DEPOT_TOOLS_PATH=/home/abhijit/Projects/ChromeOS/depot_tools
-export IDEA_HOME=/home/abhijit/local/idea-IC-141.178.9
-export JAVA_HOME=/opt/java/64/jdk1.7.0_79/
-export PATH=~/bin:$GOROOT/bin:$GOPATH/bin:$SCALA_HOME/bin:$DEPOT_TOOLS_PATH:$IDEA_HOME/bin:$PATH
+export GOPATH=$HOME/go
+export PATH=~/bin:$GOROOT/bin:$GOPATH/bin:~/local/idea-IC-162.1121.32/bin:$PATH
 
 if [ "$OS" == "Darwin" ]; then
    alias ls='ls -G'
-   export JAVA_HOME=`/usr/libexec/java_home`
+   export JAVA_HOME=/usr/libexec/java_home
 elif [ "$OS" == "Linux" ]; then
    alias ls='ls --color'
+   export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 fi
 
-tunnel() {
-    sshpass -p c0113ct0r ssh -lubuntu -L $1:127.0.0.1:$1 $2
-}
+# The next line updates PATH for the Google Cloud SDK.
+source '/home/abhijit/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/home/abhijit/google-cloud-sdk/completion.bash.inc'
