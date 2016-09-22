@@ -1,0 +1,10 @@
+#!/bin/bash
+
+GO_ENV=go_env.sh
+export TOP=`pwd`
+export PYTHONUSERBASE=$TOP/.python
+export PYTHONPATH=$TOP/.python
+export GOPATH=$TOP/.go
+if [ -e $GO_ENV ]; then
+  . $GO_ENV
+fi

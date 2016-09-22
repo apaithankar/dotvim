@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+  # echo "$0 BOOT_DISK DATA_DISK"
+  echo "$0 BOOT_DISK"
+  exit 1
+fi
+
+BOOT_DISK=$1
+#DATA_DISK=$2
+
+echo "Using $BOOT_DISK as boot disk"
+#echo "Using $DATA_DISK as data disk"
+
+echo "Deleting cluster"
+# /home/nutanix/list 10.5.209.107 app_container_cluster delete
+
+echo "Stopping orion"
+# allssh genesis stop orion
+
+#echo "Deleting old data disk from acropolis"
+#acli -y image.delete orion-data-disk
+echo "Deleting old boot disk from acropolis"
+acli -y image.delete orion-boot-disk
+
+echo "Importing new boot disk into acropolis"
+acli image.create orion-boot-disk source_url=http://filer.dev.eng.nutanix.com:8080/GoldImages/Orion/centos/builds/${BOOT_DISK} annotation=Orion-VM container=default-container-58151
+#echo "Importing new data disk into acropolis"
+#acli image.create orion-data-disk source_url=http://filer.dev.eng.nutanix.com:8080/GoldImages/Orion/centos/builds/${DATA_DISK} annotation=Orion-DataDisk container=default-container-58151
+
+cluster start
