@@ -1,5 +1,0 @@
-BR=$(git rev-parse --abbrev-ref HEAD)
-git co master || exit 1
-git pull origin master || exit 1
-git co $BR || exit 1
-git pull --rebase origin master
