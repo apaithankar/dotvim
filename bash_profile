@@ -48,7 +48,11 @@ elif [ "$OS" == "Linux" ]; then
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/home/abhijit/google-cloud-sdk/path.bash.inc'
+if [ -f /Users/abhijitpaithankar/google-cloud-sdk/path.bash.inc ]; then
+  source '/Users/abhijitpaithankar/google-cloud-sdk/path.bash.inc'
+fi
 
 # The next line enables shell command completion for gcloud.
-source '/home/abhijit/google-cloud-sdk/completion.bash.inc'
+if [ -f /Users/abhijitpaithankar/google-cloud-sdk/completion.bash.inc ]; then
+  source '/Users/abhijitpaithankar/google-cloud-sdk/completion.bash.inc'
+fi
