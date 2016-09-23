@@ -18,8 +18,8 @@ call pathogen#helptags()
 execute pathogen#infect()
 " set cursorline
 set number
-set background=dark
-" set background=light
+" set background=dark
+set background=light
 " let g:solarized_termtrans=1
 set t_Co=256
 syntax on
@@ -85,3 +85,8 @@ if exists('+colorcolumn')
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
+
+" Support for protobuf files
+augroup filetype
+  au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
