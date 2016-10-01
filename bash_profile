@@ -29,8 +29,9 @@ export PYTHONPATH=${TOP}/.python
 export DISTCC_HOSTS="--randomize distcc-0 distcc-1 distcc-2 distcc-3 distcc-4 distcc-5 distcc-6 distcc-7 distcc-8 distcc-9 distcc-a distcc-b distcc-c distcc-d"
 export CCCACHE_DISABLE=1
 export CSCOPE_EDITOR=vim
-export GOROOT=/opt/google/go-1.6.2
-export PATH=~/bin:$GOROOT/bin:$PATH
+export GOROOT=/usr/local/go
+export GOPATH=/home/abhijit/go
+export PATH=~/bin:$GOROOT/bin:$GOPATH/bin:$PATH
 # export GOPATH=$TOP/.go
 # export GOBIN=$GOPATH/bin
 # export PATH=$PATH:/opt/google/go-1.6.2/bin
@@ -55,4 +56,18 @@ fi
 # The next line enables shell command completion for gcloud.
 if [ -f /Users/abhijitpaithankar/google-cloud-sdk/completion.bash.inc ]; then
   source '/Users/abhijitpaithankar/google-cloud-sdk/completion.bash.inc'
+fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /home/abhijit/google-cloud-sdk/path.bash.inc ]; then
+  source '/home/abhijit/google-cloud-sdk/path.bash.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /home/abhijit/google-cloud-sdk/completion.bash.inc ]; then
+  source '/home/abhijit/google-cloud-sdk/completion.bash.inc'
+fi
+
+if [ -f /home/abhijit/dotvim/bundle/gruvbox/gruvbox_256palette.sh ]; then
+  source '/home/abhijit/dotvim/bundle/gruvbox/gruvbox_256palette.sh'
 fi
