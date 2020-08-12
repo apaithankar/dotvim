@@ -1,24 +1,3 @@
-[submodule "bundle/vim-go"]
-	path = bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
-[submodule "bundle/gruvbox"]
-	path = bundle/gruvbox
-	url = https://github.com/morhetz/gruvbox.git
 [submodule "bundle/Vundle.vim"]
 	path = bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
-[submodule "bundle/Cleanroom"]
-	path = bundle/Cleanroom
-	url = https://github.com/vim-scripts/Cleanroom.git
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/dracula-theme"]
-	path = bundle/dracula-theme
-	url = git@github.com:dracula/vim.git
