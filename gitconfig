@@ -18,3 +18,14 @@
   editor = vim
 [push]
   default = matching
+[url "git@gitlab-master.nvidia.com:12051/"]
+      insteadOf = https://gitlab-master.nvidia.com:12051/
+[url "ssh://git@gitlab-master.nvidia.com:12051/"]
+      insteadOf = https://gitlab-master.nvidia.com/
+[url "ssh://git@gitlab-master.nvidia.com:12051"]
+	insteadOf = https://gitlab-master.nvidia.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

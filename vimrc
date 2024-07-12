@@ -24,9 +24,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'morhetz/gruvbox'
 Plugin 'Cleanroom'
-Plugin 'vim-colors-solarized'
-Plugin 'vim-fugitive'
-Plugin 'vim-go'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
+Plugin 'wojciechkepka/vim-github-dark'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,24 +61,31 @@ set autoindent
 set dictionary+=/usr/share/dict/words
 " set cursorline
 set number
-" set background=dark
-set background=light
-" let g:solarized_termtrans=1
+
 set t_Co=256
+"set background=light
+set background=dark
 syntax on
+
 " color desert
 " color mayansmoke
 " colorscheme solarized
 " colorscheme cleanroom
-" set termguicolors
-colorscheme gruvbox
+" colorscheme gruvbox
+" colorscheme ghdark
 " silent! colorscheme inori
 " colorscheme hemisu
 " colorscheme ir_black
 " colorscheme pyte
 " colorscheme molokai
+"
 " setlocal spell spelllang=en_us
 " set spell
+"
+" set termguicolors
+"
+let g:solarized_termtrans=1
+"
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
