@@ -1,6 +1,7 @@
 [user]
 	email = apaithankar@nvidia.com
 	name = Abhijit Paithankar
+	signingkey = /home/apaithankar/.ssh/id_rsa.pub
 [alias]
   co = checkout
   br = branch
@@ -29,3 +30,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh

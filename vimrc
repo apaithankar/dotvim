@@ -63,7 +63,7 @@ set dictionary+=/usr/share/dict/words
 set number
 
 set t_Co=256
-"set background=light
+" set background=light
 set background=dark
 syntax on
 
@@ -73,6 +73,8 @@ syntax on
 " colorscheme cleanroom
 " colorscheme gruvbox
 " colorscheme ghdark
+" set termguicolors
+colorscheme gruvbox
 " silent! colorscheme inori
 " colorscheme hemisu
 " colorscheme ir_black
@@ -82,9 +84,7 @@ syntax on
 " setlocal spell spelllang=en_us
 " set spell
 "
-" set termguicolors
-"
-let g:solarized_termtrans=1
+" let g:solarized_termtrans=1
 "
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
